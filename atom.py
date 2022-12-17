@@ -1,6 +1,3 @@
-import sys  # import module sys
-
-
 class atom:  # create the class atom
     def __init__(self,symbol,name,atomic_n,atomic_m,family,period,neutron,proton,electron, year,):
         self.symbol = symbol
@@ -27,7 +24,6 @@ class atom:  # create the class atom
         self.year = splittedLine[9]
 
     def PrintMe(self):  # def PrintMe function
-        print("")
         print(f"| Symbole chimique : {self.symbol}")
         print(f"| Nom : {self.name}")
         print(f"| Numéro atomique : {self.atomic_n}")
@@ -38,44 +34,4 @@ class atom:  # create the class atom
         print(f"| Nombre de protons : {self.proton}")
         print(f"| Nombre d'électrons : {self.electron}")
         print(f"| Année de découverte : {self.year}")
-        print("")
 
-def __main__():  # def __main__ fonction
-    # Declare some atoms and put them in a array
-    AtomsList  = []
-    CSVfile = open("AtomsDB.csv", "r")
-    Lines = CSVfile.readlines()
-    for line in Lines:
-        ValuesSplitted = line.rstrip(";\n").split(";")
-        if len(ValuesSplitted) == 10:
-            AtomsList.append(atom(ValuesSplitted))
-            # for value in ValuesSplitted:
-            #         print(value)
-        else: 
-            print("Incorrect line")
-            print(line)
-    WrongInputMessage = "Not found in database - try again"
-    while True: 
-
-        InputString = str(input("Nom de l'atome / Numéro atomique / Symbol: ")).upper()
-        
-        if InputString == "QUIT":
-            sys.exit()
-
-        found = False
-        for currentAtom in AtomsList:
-            if (
-                currentAtom.symbol.upper() == InputString 
-                or currentAtom.name.upper() == InputString
-                or currentAtom.atomic_n.upper() == InputString
-            ):
-                currentAtom.PrintMe()
-                found = True
-                break
-        if not found:
-            print(WrongInputMessage)
-        
-        
-
-
-__main__()
