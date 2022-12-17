@@ -1,7 +1,7 @@
 # AtomicTeller
 A Program that give you information about an atom.
 
-Actual version : V.0.1.3
+Actual version : V.0.2.0
 ----------------------------------------------------------------------------------------------
 Salut tout le monde ! 
 
