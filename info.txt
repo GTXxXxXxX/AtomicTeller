@@ -1,7 +1,0 @@
-	Version
-
-------------------------
-
-1er Chiffre : Énorme changement, rares occasions, souvent nouveau model/implémentation du programme
-2e Chiffre : Changement moyens. Exemple : Ajout d'une nouvelle fonction ou ajout de contenu
-3e Chiffre : Changement mineurs à chaque fin de session de code
